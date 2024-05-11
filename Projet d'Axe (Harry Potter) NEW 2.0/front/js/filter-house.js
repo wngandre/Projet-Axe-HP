@@ -3,14 +3,14 @@ document.getElementById("houseFilter").addEventListener("change", function (e) {
   fetchCards(house);
 });
 
-function fetchCards(h) {
+function fetchCards(hp) {
   fetch("https://hp-api.lainocs.fr/characters")
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      console.log(h);
-      if (h) {
-        data = data.filter((characters) => characters.house === h);
+      console.log(hp);
+      if (hp) {
+        data = data.filter((characters) => characters.house === hp);
       } else {
         data = data.filter((characters) => characters.house === "");
       }
@@ -21,18 +21,18 @@ function fetchCards(h) {
 }
 
 function displayCards(cards) {
-  var cardContainer = document.getElementById("characters");
+  let cardContainer = document.getElementById("characters");
   cardContainer.innerHTML = "";
   cards.forEach(function (card) {
-    var cardElement = document.createElement("div");
+    let cardElement = document.createElement("div");
     cardElement.classList.add("character-card");
-    var cardImage = document.createElement("img");
+    let cardImage = document.createElement("img");
     cardImage.classList.add("characters");
     cardImage.src = card.image;
-    var cardName = document.createElement("h2");
+    let cardName = document.createElement("h2");
     cardName.classList.add("card-name");
     cardName.textContent = card.name;
-    var cardLink = document.createElement("a");
+    let cardLink = document.createElement("a");
     cardLink.href =
       "single-hp.html?slug=" +
       encodeURIComponent(card.slug) +

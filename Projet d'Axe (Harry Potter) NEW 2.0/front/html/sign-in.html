@@ -17,7 +17,7 @@
               <nav class="main-header">
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
-                        <li><a href="hp.html">Collection</a></li>
+                        <li><a href="collection.html">Collection</a></li>
                         <li><img class="logo" src="../img/logo.png" alt="logo" width="310"></li>
                         <li><a href="FAQ.html">À propos de nous</a></li>
                         <li><a href="sign-in.html">Connexion</a></li>
@@ -32,7 +32,7 @@
                 <hr>
                 <div class="form-case">
                     <label for="email">Email : </label>
-                    <input type="email" name="email" placeholder="harry.potter@poudlard.com">
+                    <input type="email" name="email" id="email" placeholder="harry.potter@poudlard.com">
                 </div>
 
                 <div class="form-case">
@@ -46,7 +46,7 @@
                 </div>
                 
                 <div class="btn-sign-in">
-                    <button type="button" onclick="logIn()">Je me connecte</button>
+                    <button type="button" onclick="logIn()"><a href="profil.html">Je me connecte</a></button>
                 </div>
 
                 <div class="sign-up-link">
@@ -63,5 +63,6 @@
 
         <script src="../js/sidenav.js"></script>
         <script src="../js/login.js"></script>
+        <script src="../js/localstorage.js"></script>
 </body>
 </html>

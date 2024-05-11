@@ -1,5 +1,5 @@
 const searchBar = document.getElementById('searchBar');
-const character = document.getElementsByClassName('character');
+const character = document.getElementsByClassName('character-card');
 
 searchBar.addEventListener('keyup', function(e) {
     const term = e.target.value.toLowerCase();
@@ -9,7 +9,7 @@ searchBar.addEventListener('keyup', function(e) {
         const cardText = character.textContent.toLowerCase();
 
         if (cardText.includes(term)) {
-            character.style.display = 'block';
+            character.style.display = 'flex';
         } else {
             character.style.display = 'none';
         }
